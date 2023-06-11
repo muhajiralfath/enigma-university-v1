@@ -83,6 +83,31 @@ public class DataMahasiswa {
                 menuNumber = 0;
             }
 
+            // view all mahasiswa
+            if (menuNumber == 3) {
+
+                System.out.println("--------------------------------------");
+                System.out.println("Vie All Mahasiswa");
+                System.out.println("--------------------------------------");
+
+                if (students[0][0] != null){
+                    for (int i = 0; i < (counterStudent); i++) {
+                        System.out.println((i + 1) + ".");
+                        System.out.println("Nama: " + students[i][0]);
+                        System.out.println("Umur: " + students[i][1]);
+                        System.out.println("Jurusan: " + students[i][2]);
+                        System.out.println();
+                    }
+                } else {
+                    System.out.println("Daftar Mahasiswa kosong, tambahkan daftar mahasiswa terlebih dahulu");
+                }
+
+                System.out.println("--------------------------------------");
+
+                System.out.print("Input angka 0 jika ingin kembali ke Menu atau sembarang jika ingin keluar : ");
+                menuNumber = scan.nextInt();
+            }
+
 
         } while (menuNumber < 1 || menuNumber > 4);
 
