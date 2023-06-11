@@ -108,6 +108,11 @@ public class DataMahasiswa {
                 menuNumber = scan.nextInt();
             }
 
+            // Exit
+            if (menuNumber == 4){
+                return;
+            }
+
 
         } while (menuNumber < 1 || menuNumber > 4);
 
