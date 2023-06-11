@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DataMahasiswa {
+public class StudentData {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int menuNumber = 0;
