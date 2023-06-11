@@ -35,7 +35,15 @@ public class DataMahasiswa {
                     major = scan.nextLine();
                     System.out.println("--------------------------------------");
 
-                    if ((name.length() >= 3 && name.length() <= 20) && (Integer.parseInt(age) >= 17) && (major.length() <= 10)) {
+                    // age validation
+                    boolean isAgeValid;
+
+                    if (age.matches(".*[a-zA-Z].*") || (Integer.parseInt(age) < 17)){
+                        isAgeValid = false;
+                    } else {
+                        isAgeValid = true;
+                    }
+                    if ((name.length() >= 3 && name.length() <= 20) && isAgeValid && (major.length() <= 10) && (isAgeValid)) {
                         for (int i = 0; i < students.length; i++) {
                             if (students[i][0] == null) {
                                 students[i][0] = name;
