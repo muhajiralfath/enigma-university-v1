@@ -59,6 +59,31 @@ public class DataMahasiswa {
                 menuNumber = 0;
             }
 
+            // delete mahasiswa
+
+            if (menuNumber == 2){
+
+                System.out.println("--------------------------------------");
+                System.out.println("Delete All Mahasiswa");
+                System.out.println("--------------------------------------");
+
+                if (counterStudent != 0){
+                    students[counterStudent - 1][0] = null;
+                    students[counterStudent - 1][1] = null;
+                    students[counterStudent - 1][2] = null;
+                    counterStudent--;
+                    System.out.println("Mahasiswa yang masuk terakhir didelete");
+                    System.out.println("--------------------------------------");
+                    System.out.println();
+                } else {
+                    System.out.println("Daftar mahasiswa kosong, silahkan tambahkan data mahasiswa terlebih dahulu");
+                    System.out.println("--------------------------------------");
+                    System.out.println();
+                }
+                menuNumber = 0;
+            }
+
+
         } while (menuNumber < 1 || menuNumber > 4);
 
     }
