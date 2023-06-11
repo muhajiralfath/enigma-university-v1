@@ -104,8 +104,25 @@ public class DataMahasiswa {
 
                 System.out.println("--------------------------------------");
 
-                System.out.print("Input angka 0 jika ingin kembali ke Menu atau sembarang jika ingin keluar : ");
-                menuNumber = scan.nextInt();
+                boolean backToMenu = false;
+
+                do {
+                    System.out.print("Input angka 0 jika ingin kembali ke Menu atau 4 jika ingin keluar : ");
+                    if (scan.hasNextInt()){
+                        menuNumber = scan.nextInt();
+                        scan.nextLine();
+                        if (menuNumber != 0 && menuNumber != 4){
+                            backToMenu = false;
+                            System.out.println("Input tidak valid. Masukkan angka 0 atau 4.");
+                        } else {
+                            backToMenu = true;
+                        }
+                    } else {
+                        scan.nextLine();
+                        System.out.println("Input tidak valid. Masukkan angka 0 atau 4.");
+                    }
+                } while (!backToMenu);
+
             }
 
             // Exit
